@@ -1,0 +1,26 @@
+/* Write your code here: */
+
+/* Group combination: apply to both selectors */
+h1, h2{
+    color: blueviolet;
+}
+
+/* Parent & child combination: apply to a child on the left side; direct descendant */
+.box > p{
+    color: firebrick;
+}
+
+/* Ancestor & Descendant Combination: Apply to a descendant of the left side */
+.box li{
+    color: blue;
+}
+
+/* Chaining Combination: Apply where ALL selectors are true */
+li.done{
+    color: seagreen;
+}
+
+/* Combining Combinations: */
+ul p.done{
+    font-size: 0.5rem;
+}

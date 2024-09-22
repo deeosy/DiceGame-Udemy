@@ -1,0 +1,65 @@
+body{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.block{
+    display: inline-block;
+    width: 40%;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    
+}
+
+h1{
+    font-size: 5rem;
+}
+
+h1 > div{
+    color: blueviolet;
+}
+
+.construction{
+    float: right;
+}
+
+.bold{
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer > p {
+    color: blueviolet;
+    clear: both;
+    text-align: right;
+    
+    position: relative;
+    top: 100px;
+}
+
+@media (min-width:450px) and (max-width: 850px){
+    .block{
+        display: block;
+        position: relative;
+    }
+    .construction{
+        float: left;
+    }
+    footer > p{
+        clear: both;
+
+    }
+
+}
+
+.pic{
+    height: 300px;
+    width: 450px;
+}
+

@@ -1,0 +1,16 @@
+h1 {
+  color: red;
+}
+
+.huge{
+font-size: 10rem;
+margin: 1rem;
+color: aqua;
+
+
+}
+
+.btnNice{
+  border-radius: 5px;
+  padding: 10px;
+}

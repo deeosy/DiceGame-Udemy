@@ -1,0 +1,23 @@
+body{
+    overflow-x: hidden;
+    background-color: rgba(128, 128, 128, 0.26);
+}
+
+
+.bgImg{
+    height: 55vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(0.6);
+    
+}
+
+.belowImage {
+    position: relative;
+    top: 400px;
+    left: 0;
+}
