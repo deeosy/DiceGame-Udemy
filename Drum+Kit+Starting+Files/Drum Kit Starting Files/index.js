@@ -135,15 +135,15 @@ function buttonAnimation(currentkey){
 // audio.play();
 
 
-// // Constructor Function (note the name of constructor functions have to capitalized) that allows us to write less code for multiple objects. so we will use this function. example below
-// function BellBoy(name, age, hasWorkPermit, languages) {
-//   this.name = name;
-//   this.age = age;
-//   this.hasWorkPermit = hasWorkPermit;
-//   this.languages = languages;
-// }
+// Constructor Function (note the name of constructor functions have to capitalized) that allows us to write less code for multiple objects. so we will use this function. example below
+function BellBoy(name, age, hasWorkPermit, languages) {
+  this.name = name;
+  this.age = age;
+  this.hasWorkPermit = hasWorkPermit;
+  this.languages = languages;
+}
 
-// let bellBoy1 = new BellBoy("Timmy", 19, true, ["English", "French"])
+let bellBoy1 = new BellBoy("Timmy", 19, true, ["English", "French"])
 
 
 // // creating another Constructor function below
