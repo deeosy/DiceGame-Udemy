@@ -5,6 +5,8 @@ import Note from "./components/Note";
 import CreateArea from "./components/CreateArea";
 import './App.css'
 
+
+
 function App() {
   const [notes, setNotes] = useState([]);
 
@@ -14,28 +16,37 @@ function App() {
 
   const deleteNote = (id) => {
     setNotes((previousNotesArray) =>
-      previousNotesArray.filter((noteItem, index) => index !== id)
+      previousNotesArray.filter((noteItem) => noteItem.id !== id)
     );
   };
 
-  const editNote = (id) => {
-
+  const editNote = (id, editedEntry) => {
+    setNotes(notes.map((note)=>{
+      if(note.id === id) {
+        return {...note, ...editedEntry}
+      } else{
+        return note
+      }
+    }))
   };
+
 
   return (
     <div>
       <Header />
       <CreateArea addNote={addNote} />
-      {notes.map((note, index) => (
+      {notes.map((note) => (
         <Note
-          key={index}
-          id={index}
+          key={note.id}
+          id={note.id}
           deleteNote={deleteNote}
           title={note.title}
           content={note.content}
           editNote={editNote}
-        />
-      ))}
+          />
+        ))
+      }
+
       <Footer />
     </div>
   );

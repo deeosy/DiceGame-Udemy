@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import AddIcon from '@mui/icons-material/Add';
 import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
+import {v4 as uuid} from 'uuid'
 
 function CreateArea({ addNote }) {
-  const [createNote, setCreateNote] = useState({ title: "", content: "" });
+  const [createNote, setCreateNote] = useState({ title: "", content: "", id:uuid() });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -13,7 +14,7 @@ function CreateArea({ addNote }) {
 
   const addBtn = (e) => {
     addNote(createNote);
-    setCreateNote({ title: "", content: "" });
+    setCreateNote({ title: "", content: "", id:uuid() });
     e.preventDefault();
   };
 
@@ -25,7 +26,7 @@ function CreateArea({ addNote }) {
   return (
     <div>
       <form className="create-note" >
-        {/* code be handles expansion if expand is true show input title text */}
+        {/* code below handles expansion if expand is true show input title text */}
         {isExpand &&
         <input
           onChange={handleChange}
